@@ -1,0 +1,146 @@
+<!--
+ * @Author: Jeff_L
+ * @Date: 2024-01-31 14:14:39
+ * @LastEditors: Jeff_L && yanxinluo28@gmail.com
+ * @LastEditTime: 2024-02-02 17:24:11
+ * @FilePath: \project\templates\home.html
+ * @Description: 
+ * 
+ * Copyright (c) 2024 by ${yanxinluo28@gmail.com}, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Homepage with Sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        aside {
+            width: 250px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100%;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        ul li a:hover {
+            background-color: #555;
+        }
+
+        /* Icon links styles */
+        .icon-links {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: flex-end; /* Align items to the bottom */
+        }
+
+        .icon-links a {
+            margin-right: 20px; /* Increase margin for larger spacing */
+            color: #333;
+            text-decoration: none;
+            font-size: 20px; /* Slightly smaller font size */
+            position: relative;
+            transition: color 0.3s; /* Control the transition time for color change */
+        }
+
+        .icon-links a:hover {
+            color: #ff6600; /* Change color on hover */
+        }
+
+        .icon-links a::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 4px;
+            opacity: 0;
+            transition: opacity 0.3s, font-size 0.3s; /* Control the transition time for opacity and font-size */
+            pointer-events: none;
+            font-size: 14px; /* Smaller font size */
+        }
+
+        .icon-links a:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="icon-links">
+        <a href="https://github.com" target="_blank" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" target="_blank" data-tooltip="Share"><i class="fas fa-share"></i></a>
+        <a href="mailto:jl1254@duke.edu" data-tooltip="Email"><i class="far fa-envelope"></i></a>
+        <a href="https://www.buymeacoffee.com" target="_blank" data-tooltip="Buy Me a Coffee"><i class="fas fa-coffee"></i></a>
+    </div>
+
+    <aside>
+        <h2>Sidebar</h2>
+        <ul>
+            <li><a href="#">Menu Item 1</a></li>
+            <li><a href="#">Menu Item 2</a></li>
+            <li><a href="#">Menu Item 3</a></li>
+            <!-- Add more menu items as needed -->
+        </ul>
+    </aside>
+
+    <main>
+        <h1>Main Content</h1>
+        <p>This is the main content of the webpage.</p>
+    </main>
+
+</body>
+</html>

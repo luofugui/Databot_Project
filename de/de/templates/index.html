@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plot Selection</title>
+</head>
+<body>
+    <h1>Select Plot Parameters</h1>
+    <form action="/plot" method="post">
+        <label for="grouping_selection">Group by:</label>
+        <select name="grouping_selection" id="grouping_selection">
+            <option value="Month">Month</option>
+            <option value="Day">Day</option>
+        </select>
+        <br><br>
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date">
+        <br><br>
+        <input type="submit" value="Generate Plot">
+    </form>
+</body>
+</html>
