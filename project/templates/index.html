@@ -15,12 +15,14 @@
             height: 100vh;
             margin: 0;
             flex-direction: column;
-            background: url('./images/BoktV9.gif') center/cover fixed; /* Add your background GIF URL */
+            background: url('./images/jb0u633yc7v81.gif') center/cover fixed; /* Add your background GIF URL */
             background-color: rgba(255, 255, 255, 0.5); /* Set the background color with transparency */
+            position: relative;
         }
 
         h1 {
             text-align: center;
+            -webkit-text-fill-color: #d4d4cc;
         }
 
         button {
@@ -37,6 +39,7 @@
             margin: 10px 0;
             cursor: pointer;
             overflow: hidden;
+            margin-bottom: 400px;
         }
 
         button::after {
@@ -68,11 +71,12 @@
             align-items: flex-end; /* Align items to the bottom */
         }
 
+        /* Icon links styles */
         .icon-links a {
-            margin-right: 20px; /* Increase margin for larger spacing */
-            color: #333;
+            margin-right: 30px; /* Increase margin for larger spacing */
+            color: #97b467; /* Change icon color to #ab7d4e */
             text-decoration: none;
-            font-size: 20px; /* Slightly smaller font size */
+            font-size: 30px; /* Double the font size */
             position: relative;
             transition: color 0.3s; /* Control the transition time for color change */
         }
@@ -100,10 +104,21 @@
         .icon-links a:hover::before {
             opacity: 1;
         }
+
+        /* Style for the GIF */
+        #corner-gif {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px; /* Set the width of the GIF */
+            height: auto; /* Maintain aspect ratio */
+        }
     </style>
 </head>
 
 <body>
+    <!-- Add the GIF element -->
+    <img id="corner-gif" src='./images/chinese-3407_256.gif' alt="Corner GIF">
 
     <div class="icon-links">
         <a href="https://github.com" target="_blank" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
